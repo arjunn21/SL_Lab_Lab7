@@ -1,0 +1,45 @@
+
+  <div ng-app="Calc">
+    <p>
+      <mat-toolbar>
+        <mat-icon aria-hidden="false" aria-label="Example home icon"> assessment </mat-icon>
+        <span id ="title">Calculator using Angular</span>
+      </mat-toolbar>
+    </p>
+    <div ng-controller="MainCtrl" class="container">
+    <div>
+    </div>
+        <div id="CalcShell" >
+          <mat-card id="CalcScreen">
+              <input matInput type="text" name="Input" id="CalcText" [value]="displayValue">
+          </mat-card>
+          <div id="button-row">
+            <button mat-button id="C" class="btn clearbtn" (click)="clear()">C</button>
+            <button mat-button id="CA" class="btn clearbtn" (click)="clearAll()">CA</button>
+
+            <button mat-button id="/" class="btn1" (click)="addOperator('/')">&divide;</button>
+            <button mat-button id="*" class="btn1" (click)="addOperator('*')">&times;</button>
+
+            <button mat-button id="7" class="btn" (click)="addNumber(7)">7</button>
+            <button mat-button id="8" class="btn" (click)="addNumber(8)">8</button>
+            <button mat-button id="9" class="btn" (click)="addNumber(9)">9</button>
+            <button mat-button id="+" class="btn1" (click)="addOperator('+')">&#43;</button>
+            <button mat-button id="4" class="btn" (click)="addNumber(4)">4</button>
+            <button mat-button id="5" class="btn" (click)="addNumber(5)">5</button>
+            <button mat-button id="6" class="btn" (click)="addNumber(6)">6</button>
+            <button mat-button id="-" class="btn1" (click)="addOperator('-')">&#45;</button>
+            <button mat-button id="1" class="btn" (click)="addNumber(1)">1</button>
+            <button mat-button id="2" class="btn" (click)="addNumber(2)">2</button>
+            <button mat-button id="3" class="btn" (click)="addNumber(3)">3</button>
+            <button mat-button id="hide" class="btn">?</button>
+            <button mat-button id="zero" class="btn" (click)="addNumber(0)">0</button>
+            <button mat-button id="." class="btn" (click)="adddot('.')">.</button>
+
+            <button mat-button id="equals" class="btn" (click)="calculate()">=</button>
+            <br>
+            <button mat-button id="prime" class="btn" (click)="addOperator('p') ">Prime</button>
+            <button mat-button id="factorial" class="btn" (click)="addOperator('!')">Factorial(!)</button>
+          </div>
+        </div>
+    </div>
+  </div>
